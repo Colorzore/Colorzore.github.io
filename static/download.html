@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    // 从URL参数中获取文件名（例如：?file=example.package）
+    const params = new URLSearchParams(window.location.search);
+    const fileName = params.get('file');
+    if (fileName) {
+      const rawUrl = `https://raw.githubusercontent.com/Colorzore/Colorzore.github/main/${fileName}`;
+      window.location.href = rawUrl; // 触发下载
+    }
+  </script>
+</body>
+</html>
